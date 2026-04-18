@@ -13,8 +13,12 @@ set -u
 
 event="${1:-}"
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+if [ -n "${CLAUDE_PLUGIN_ROOT:-}" ]; then
+  ROOT_DIR="$CLAUDE_PLUGIN_ROOT"
+else
+  SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+fi
 
 LIGHT_SEC="${CC_GYM_LIGHT_SEC:-20}"
 HEAVY_SEC="${CC_GYM_HEAVY_SEC:-180}"
