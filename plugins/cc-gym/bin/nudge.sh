@@ -26,7 +26,9 @@ LIGHT_FILE="${CC_GYM_LIGHT_FILE:-$ROOT_DIR/lib/exercises.light.txt}"
 HEAVY_FILE="${CC_GYM_HEAVY_FILE:-$ROOT_DIR/lib/exercises.heavy.txt}"
 STATE_DIR="${CC_GYM_STATE_DIR:-${TMPDIR:-/tmp}}"
 # Minimum seconds between any two notifications across ALL parallel sessions.
-GLOBAL_COOLDOWN="${CC_GYM_GLOBAL_COOLDOWN:-$LIGHT_SEC}"
+# Default 15 min: anti-sedentary cadence that stays out of the way when many
+# sessions run in parallel. Lower it if you want more frequent nudges.
+GLOBAL_COOLDOWN="${CC_GYM_GLOBAL_COOLDOWN:-900}"
 
 payload="$(cat 2>/dev/null || true)"
 sid="$(printf '%s' "$payload" | jq -r '.session_id // "default"' 2>/dev/null || echo default)"
