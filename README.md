@@ -19,9 +19,17 @@
 
 ## 更新 / 卸载
 
+Claude Code 不会自动拉新版本，需要手动两步：
+
 ```
-/plugin marketplace update       # 拉 marketplace 最新
-/plugin uninstall cc-gym         # 卸载
+/plugin marketplace update cc-gym     # 拉 marketplace 最新 commit
+/plugin update cc-gym@cc-gym          # 更新插件本体
+```
+
+之后重启或 `/reload-plugins` 让新钩子生效。卸载：
+
+```
+/plugin uninstall cc-gym@cc-gym
 ```
 
 ## 配置
