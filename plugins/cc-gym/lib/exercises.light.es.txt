@@ -1,0 +1,13 @@
+# Tanda ligera: 20-30 segundos, sin levantarte del escritorio.
+# Formato: category: acción. category ∈ {eye, neck, leg, breath}
+# Una por línea; las líneas que empiezan con # son comentarios.
+neck: Gira el cuello despacio, 5 segundos en cada dirección
+breath: Haz 5 respiraciones profundas
+eye: Mira algo a 6 m de distancia durante 20 segundos (regla 20/20/20)
+neck: Encoge los hombros y suelta, 10 repeticiones
+neck: Círculos con las muñecas, 10 en cada dirección
+neck: Junta los omóplatos hacia atrás y aguanta 10 segundos, 3 series
+neck: Estira el cuello llevando la oreja al hombro, 10 segundos por lado
+eye: Parpadea 20 veces para rehidratar los ojos
+neck: Círculos lentos con la barbilla, 5 en cada dirección
+neck: Abre y cierra las manos, 15 veces cada una

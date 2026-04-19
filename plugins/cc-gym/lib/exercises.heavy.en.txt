@@ -1,0 +1,13 @@
+# Heavy pool: 1-2 minutes, get up and leave your seat.
+# Format: category: action. category ∈ {eye, neck, leg, breath}
+# One per line; lines starting with # are comments.
+leg: Get up, walk a lap, refill your water
+eye: Stand by the window for 1 minute and look into the distance
+leg: Wall stand for 1 minute — heels, glutes, shoulders against the wall
+leg: 10 desk push-ups
+leg: Stand and bend forward to touch your toes, hold 15 seconds, 3 reps
+leg: 10 squats
+leg: Calf raises, 20 reps
+leg: Jumping jacks for 30 seconds
+leg: Standing side bends, hold 20 seconds each side
+eye: Step away from the screen for 1 minute, do anything non-work

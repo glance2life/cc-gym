@@ -1,0 +1,13 @@
+# Light pool: 20-30 seconds, no need to leave your desk.
+# Format: category: action. category ∈ {eye, neck, leg, breath}
+# One per line; lines starting with # are comments.
+neck: Roll your neck slowly, 5 seconds in each direction
+breath: Take 5 deep breaths
+eye: Look at something 6 m / 20 ft away for 20 seconds (20/20/20 rule)
+neck: Shrug shoulders up and release, 10 reps
+neck: Wrist circles, 10 in each direction
+neck: Squeeze shoulder blades back and hold 10 seconds, 3 reps
+neck: Ear-to-shoulder neck stretch, 10 seconds each side
+eye: Blink 20 times to rehydrate your eyes
+neck: Slow chin circles, 5 in each direction
+neck: Open and close your hands, 15 reps each

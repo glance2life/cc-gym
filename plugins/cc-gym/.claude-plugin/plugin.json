@@ -1,6 +1,6 @@
 {
   "name": "cc-gym",
-  "description": "在 Claude Code 忙着干活的时候，推你做一个 30 秒的小动作。",
+  "description": "While Claude Code is busy working, nudges you to do a 30-second mini-workout.",
   "version": "0.1.0",
   "keywords": ["hooks", "health", "break", "reminder", "nudge"]
 }

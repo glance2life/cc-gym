@@ -1,0 +1,13 @@
+# Leichte Übungen: 20-30 Sekunden, ohne den Schreibtisch zu verlassen.
+# Format: category: Übung. category ∈ {eye, neck, leg, breath}
+# Eine pro Zeile; Zeilen mit # sind Kommentare.
+neck: Nacken langsam kreisen, je Richtung 5 Sekunden
+breath: 5-mal tief durchatmen
+eye: Blick 20 Sekunden auf etwas in 6 m Entfernung (20/20/20-Regel)
+neck: Schultern hochziehen und fallen lassen, 10 Wiederholungen
+neck: Handgelenke kreisen, je Richtung 10-mal
+neck: Schulterblätter zusammenziehen, 10 Sekunden halten, 3-mal
+neck: Ohr zur Schulter neigen, je Seite 10 Sekunden
+eye: 20-mal blinzeln, um die Augen zu befeuchten
+neck: Langsame Kinnkreise, je Richtung 5 Runden
+neck: Hände öffnen und schließen, je 15-mal

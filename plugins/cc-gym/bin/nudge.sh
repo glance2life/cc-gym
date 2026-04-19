@@ -20,10 +20,79 @@ else
   ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 fi
 
+# Resolve UI language: CC_GYM_LANG > $LC_ALL > $LANG > 'en'.
+# Strips encoding/region (fr_FR.UTF-8 -> fr, zh-CN -> zh, C/POSIX -> en).
+resolve_lang() {
+  local raw code
+  raw="${CC_GYM_LANG:-${LC_ALL:-${LANG:-}}}"
+  code="${raw%%[._@]*}"
+  code="${code%%-*}"
+  code="$(printf '%s' "$code" | tr '[:upper:]' '[:lower:]')"
+  case "$code" in
+    en|zh|es|ja|fr|de|pt|ru|ko|ar) printf '%s' "$code" ;;
+    *)                             printf 'en' ;;
+  esac
+}
+CC_GYM_LANG_RESOLVED="$(resolve_lang)"
+
+# Hardcoded notification-fallback strings, keyed by lang:slot.
+i18n_text() {
+  case "${CC_GYM_LANG_RESOLVED}:$1" in
+    en:light_title) printf 'cc-gym 🧘 Stretch';;
+    en:light_body)  printf 'Roll your neck, take 5 deep breaths';;
+    en:heavy_title) printf 'cc-gym 💪 Move';;
+    en:heavy_body)  printf 'Stand up, walk for 1-2 minutes, step away from the screen';;
+    zh:light_title) printf 'cc-gym 🧘 小动一下';;
+    zh:light_body)  printf '转转脖子，深呼吸 5 次';;
+    zh:heavy_title) printf 'cc-gym 💪 起来动动';;
+    zh:heavy_body)  printf '起身走动 1-2 分钟，离开屏幕';;
+    es:light_title) printf 'cc-gym 🧘 Estírate';;
+    es:light_body)  printf 'Gira el cuello y haz 5 respiraciones profundas';;
+    es:heavy_title) printf 'cc-gym 💪 Muévete';;
+    es:heavy_body)  printf 'Levántate, camina 1-2 minutos, aléjate de la pantalla';;
+    ja:light_title) printf 'cc-gym 🧘 ひと伸び';;
+    ja:light_body)  printf '首を回して、深呼吸を5回';;
+    ja:heavy_title) printf 'cc-gym 💪 動こう';;
+    ja:heavy_body)  printf '1〜2分席を立って歩こう。画面から離れて';;
+    fr:light_title) printf 'cc-gym 🧘 Étire-toi';;
+    fr:light_body)  printf 'Fais tourner ton cou et 5 respirations profondes';;
+    fr:heavy_title) printf 'cc-gym 💪 Bouge';;
+    fr:heavy_body)  printf "Lève-toi, marche 1-2 minutes, éloigne-toi de l'écran";;
+    de:light_title) printf 'cc-gym 🧘 Strecken';;
+    de:light_body)  printf 'Nacken kreisen, 5-mal tief durchatmen';;
+    de:heavy_title) printf 'cc-gym 💪 Beweg dich';;
+    de:heavy_body)  printf 'Aufstehen, 1-2 Minuten gehen, weg vom Bildschirm';;
+    pt:light_title) printf 'cc-gym 🧘 Alongue-se';;
+    pt:light_body)  printf 'Gire o pescoço e faça 5 respirações profundas';;
+    pt:heavy_title) printf 'cc-gym 💪 Mexa-se';;
+    pt:heavy_body)  printf 'Levante-se, caminhe 1-2 minutos, saia da tela';;
+    ru:light_title) printf 'cc-gym 🧘 Разомнись';;
+    ru:light_body)  printf 'Покрути шеей и сделай 5 глубоких вдохов';;
+    ru:heavy_title) printf 'cc-gym 💪 Подвигайся';;
+    ru:heavy_body)  printf 'Встань и походи 1-2 минуты, отойди от экрана';;
+    ko:light_title) printf 'cc-gym 🧘 가볍게 풀기';;
+    ko:light_body)  printf '목을 돌리고 심호흡 5회';;
+    ko:heavy_title) printf 'cc-gym 💪 일어나서 움직이기';;
+    ko:heavy_body)  printf '1~2분 자리에서 일어나 걷고 화면에서 벗어나세요';;
+    ar:light_title) printf 'cc-gym 🧘 تمدّد';;
+    ar:light_body)  printf 'حرّك رقبتك وخذ 5 أنفاس عميقة';;
+    ar:heavy_title) printf 'cc-gym 💪 تحرّك';;
+    ar:heavy_body)  printf 'قف وامشِ دقيقة إلى دقيقتين، وابتعد عن الشاشة';;
+  esac
+}
+
+# Pick the lang-specific exercise file, falling back to English if missing.
+default_exercise_file() {
+  local tier="$1"
+  local path="$ROOT_DIR/lib/exercises.${tier}.${CC_GYM_LANG_RESOLVED}.txt"
+  if [ -f "$path" ]; then printf '%s' "$path"
+  else printf '%s' "$ROOT_DIR/lib/exercises.${tier}.en.txt"; fi
+}
+
 LIGHT_SEC="${CC_GYM_LIGHT_SEC:-20}"
 HEAVY_SEC="${CC_GYM_HEAVY_SEC:-180}"
-LIGHT_FILE="${CC_GYM_LIGHT_FILE:-$ROOT_DIR/lib/exercises.light.txt}"
-HEAVY_FILE="${CC_GYM_HEAVY_FILE:-$ROOT_DIR/lib/exercises.heavy.txt}"
+LIGHT_FILE="${CC_GYM_LIGHT_FILE:-$(default_exercise_file light)}"
+HEAVY_FILE="${CC_GYM_HEAVY_FILE:-$(default_exercise_file heavy)}"
 STATE_DIR="${CC_GYM_STATE_DIR:-${TMPDIR:-/tmp}}"
 # Minimum seconds between any two notifications across ALL parallel sessions.
 # Default 15 min: anti-sedentary cadence that stays out of the way when many
@@ -180,10 +249,10 @@ case "$event" in
 
     if [ "$elapsed" -ge "$HEAVY_SEC" ] && [ ! -f "$heavy_flag" ]; then
       touch "$heavy_flag"
-      nudge_with "$HEAVY_FILE" "cc-gym 💪 起来动动" "起身走动 1-2 分钟，离开屏幕"
+      nudge_with "$HEAVY_FILE" "$(i18n_text heavy_title)" "$(i18n_text heavy_body)"
     elif [ "$elapsed" -ge "$LIGHT_SEC" ] && [ ! -f "$light_flag" ]; then
       touch "$light_flag"
-      nudge_with "$LIGHT_FILE" "cc-gym 🧘 小动一下" "转转脖子，深呼吸 5 次"
+      nudge_with "$LIGHT_FILE" "$(i18n_text light_title)" "$(i18n_text light_body)"
     fi
     ;;
   *)

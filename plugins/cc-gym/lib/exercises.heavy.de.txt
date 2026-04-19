@@ -1,0 +1,13 @@
+# Schwere Übungen: 1-2 Minuten, aufstehen und vom Platz weg.
+# Format: category: Übung. category ∈ {eye, neck, leg, breath}
+# Eine pro Zeile; Zeilen mit # sind Kommentare.
+leg: Aufstehen, eine Runde laufen, Wasserglas auffüllen
+eye: 1 Minute am Fenster stehen und in die Ferne schauen
+leg: 1 Minute Wandstand: Fersen, Po und Schultern an die Wand
+leg: 10 Liegestütze am Schreibtisch
+leg: Im Stehen die Zehen berühren, 15 Sekunden halten, 3-mal
+leg: 10 Kniebeugen
+leg: Wadenheben, 20 Wiederholungen
+leg: 30 Sekunden Hampelmann
+leg: Stehende Seitneigungen, je Seite 20 Sekunden halten
+eye: 1 Minute weg vom Bildschirm, irgendetwas Nicht-Arbeitendes tun

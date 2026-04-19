@@ -1,0 +1,13 @@
+# Série pesada: 1-2 minutos, levante-se e saia da cadeira.
+# Formato: category: ação. category ∈ {eye, neck, leg, breath}
+# Uma por linha; linhas começando com # são comentários.
+leg: Levante-se, dê uma volta e reabasteça o copo de água
+eye: Vá até a janela por 1 minuto e olhe para longe
+leg: Encoste na parede por 1 minuto: calcanhares, glúteos e ombros colados
+leg: 10 flexões apoiado na mesa
+leg: Em pé, incline-se para tocar os pés, segure 15 segundos, 3 séries
+leg: 10 agachamentos
+leg: Elevações de panturrilha, 20 repetições
+leg: 30 segundos de polichinelos
+leg: Inclinações laterais em pé, segure 20 segundos por lado
+eye: Saia da tela por 1 minuto e faça qualquer coisa que não seja trabalho

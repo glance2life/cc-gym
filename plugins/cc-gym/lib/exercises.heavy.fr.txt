@@ -1,0 +1,13 @@
+# Série forte : 1-2 minutes, lève-toi et quitte ton siège.
+# Format : category: action. category ∈ {eye, neck, leg, breath}
+# Une par ligne ; les lignes commençant par # sont des commentaires.
+leg: Lève-toi, fais un tour, remplis ton verre d'eau
+eye: Va à la fenêtre 1 minute et regarde au loin
+leg: Debout contre le mur 1 minute : talons, fessiers, épaules collés
+leg: 10 pompes appuyé sur le bureau
+leg: Debout, penche-toi pour toucher tes pieds, tiens 15 secondes, 3 fois
+leg: 10 squats
+leg: Montées sur la pointe des pieds, 20 répétitions
+leg: 30 secondes de jumping jacks
+leg: Inclinaisons latérales debout, tiens 20 secondes par côté
+eye: Quitte l'écran 1 minute et fais ce que tu veux, sauf travailler

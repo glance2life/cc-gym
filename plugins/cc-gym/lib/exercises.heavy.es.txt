@@ -1,0 +1,13 @@
+# Tanda fuerte: 1-2 minutos, levántate y aléjate de la silla.
+# Formato: category: acción. category ∈ {eye, neck, leg, breath}
+# Una por línea; las líneas que empiezan con # son comentarios.
+leg: Levántate, da una vuelta y rellena el vaso de agua
+eye: Acércate a la ventana 1 minuto y mira a lo lejos
+leg: De pie contra la pared 1 minuto: talones, glúteos y hombros pegados
+leg: 10 flexiones apoyado en la mesa
+leg: De pie, baja a tocar los pies, aguanta 15 segundos, 3 series
+leg: 10 sentadillas
+leg: Elevaciones de talón, 20 repeticiones
+leg: 30 segundos de jumping jacks
+leg: Flexiones laterales de pie, aguanta 20 segundos por lado
+eye: Aléjate 1 minuto de la pantalla y haz algo que no sea trabajo

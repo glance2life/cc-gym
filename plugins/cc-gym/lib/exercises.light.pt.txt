@@ -1,0 +1,13 @@
+# Série leve: 20-30 segundos, sem sair da mesa.
+# Formato: category: ação. category ∈ {eye, neck, leg, breath}
+# Uma por linha; linhas começando com # são comentários.
+neck: Gire o pescoço devagar, 5 segundos para cada lado
+breath: Faça 5 respirações profundas
+eye: Olhe para algo a 6 m por 20 segundos (regra 20/20/20)
+neck: Eleve os ombros e solte, 10 repetições
+neck: Círculos com os punhos, 10 em cada direção
+neck: Junte as escápulas para trás e segure 10 segundos, 3 séries
+neck: Encoste a orelha no ombro, 10 segundos de cada lado
+eye: Pisque 20 vezes para reidratar os olhos
+neck: Círculos lentos com o queixo, 5 em cada direção
+neck: Abra e feche as mãos, 15 vezes cada

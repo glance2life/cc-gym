@@ -1,0 +1,13 @@
+# Série légère : 20-30 secondes, sans quitter ton poste.
+# Format : category: action. category ∈ {eye, neck, leg, breath}
+# Une par ligne ; les lignes commençant par # sont des commentaires.
+neck: Fais tourner ton cou lentement, 5 secondes dans chaque sens
+breath: Fais 5 respirations profondes
+eye: Regarde un objet à 6 m pendant 20 secondes (règle 20/20/20)
+neck: Hausse les épaules puis relâche, 10 répétitions
+neck: Cercles avec les poignets, 10 dans chaque sens
+neck: Serre les omoplates en arrière, tiens 10 secondes, 3 fois
+neck: Étire le cou en collant l'oreille à l'épaule, 10 secondes par côté
+eye: Cligne des yeux 20 fois pour les réhydrater
+neck: Cercles lents avec le menton, 5 dans chaque sens
+neck: Ouvre et ferme les mains, 15 fois chacune
